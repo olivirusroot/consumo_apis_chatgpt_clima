@@ -1,0 +1,63 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #EFF2D8; /* Fondo claro */
+    padding: 50px;
+}
+
+.container {
+    background-color: #D9B4A7; /* Fondo de contenedor */
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+h1, h2 {
+    text-align: center;
+    color: #A63E26; /* Color de los títulos */
+}
+
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    box-sizing: border-box;
+    font-size: 16px;
+    background-color: #EFF2D8; /* Fondo del área de texto */
+    color:black; /* Color del texto */
+    border: 1px solid #A61103; /* Borde del área de texto */
+}
+
+button {
+    padding: 10px 20px;
+    margin: 5px;
+    border: none;
+    background-color: #A63E26; /* Color de fondo de los botones */
+    color: #EFF2D8; /* Color del texto de los botones */
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #A61103; /* Color de fondo al pasar el ratón sobre los botones */
+}
+
+#responseMsg {
+    text-align: center;
+    font-weight: bold;
+    color: #A63E26; /* Color de los mensajes de respuesta */
+}
+
+#loadingIndicator p {
+    border: 5px solid #EFF2D8; /* Color de fondo del indicador de carga */
+    border-top: 5px solid #A61103; /* Color de la parte superior del indicador de carga */
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite;
+    margin: 20px auto;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}

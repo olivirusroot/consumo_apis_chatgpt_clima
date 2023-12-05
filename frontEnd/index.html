@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Recetas con ingredientes</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Encuentra una receta</h1>
+        <textarea id="ingredientInput" placeholder="Ingresa los ingredientes separados por coma"></textarea>
+        <button id="sendBtn">Enviar</button>
+
+        <!-- Indicador de carga -->
+        <div id="loadingIndicator" style="display: none; text-align: center;">
+            <p>...</p>
+        </div>
+
+        <h2>Receta sugerida</h2>
+        <textarea id="recipeOutput" readonly></textarea>
+        <button id="clearBtn">Limpiar</button>
+        <button id="saveBtn">Guardar</button>
+
+        <div id="responseMsg"></div>
+    </div>
+    <script src="consumo_api_chatgpt.js"></script>
+</body>
+</html>
