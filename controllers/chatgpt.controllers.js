@@ -34,9 +34,11 @@ export const createPlan = async (request, response) => {
       });
     const responseData = await openaiResponse.json();
     const respuesta_generada = responseData.choices[0].message.content;
-    response.json({ message: respuesta_generada });
+    let mensajeAdicional = " Si deseas, puedes usar la funcionalidad de distancia en nuestro panel ingresando los nombres de los lugares indicados y darle calcular.";
+    let mensajeSalida =respuesta_generada +mensajeAdicional
 
-    console.log(respuesta_generada);
+    response.json({ message: mensajeSalida });
+    console.log(mensajeSalida);
   } catch (e) {
     console.error("Error al hacer la petición a OpenAI:", error);
     response.status(500).send("Error al comunicarse con OpenAI");
