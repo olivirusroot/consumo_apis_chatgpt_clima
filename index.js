@@ -5,6 +5,7 @@ import routerProducts from './routes/products.routes.js'
 import routerUsers from './routes/users.routes.js'
 import routerPlan from './routes/chatgpt.routes.js'
 import routerClima from './routes/clima.routes.js'
+import routerEmail from './routes/email.routes.js'
 
 dotenv.config()
 
@@ -16,6 +17,7 @@ app.use('/api/products', routerProducts)
 app.use('/api/users', routerUsers)
 app.use('/api/chatgpt', routerPlan)
 app.use('/api/clima',routerClima)
+app.use('/sendmail', routerEmail )
 connectDatabase()
 app.listen(PORT, () => {
     console.log("El servidor se esta ejecutando " + PORT)
